@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetaFlow SDK 示例</title>
+</head>
+<body>
+    <h1>BetaFlow SDK 测试页面</h1>
+    <p>点击右下角的按钮测试 SDK 功能</p>
+    
+    <!-- 方式1: 自动初始化 -->
+    <script 
+        src="./betaflow.min.js"
+        data-auto-init="true"
+        data-tenant-id="your-tenant-id"
+        data-campaign-id="your-campaign-id"
+        data-debug="true">
+    </script>
+    
+    <!-- 方式2: 手动初始化 -->
+    <!--
+    <script src="./betaflow.min.js"></script>
+    <script>
+        const betaflow = new BetaFlow({
+            tenantId: 'your-tenant-id',
+            campaignId: 'your-campaign-id',
+            debug: true
+        });
+    </script>
+    -->
+</body>
+</html>
