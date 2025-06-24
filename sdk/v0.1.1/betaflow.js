@@ -1,6 +1,6 @@
 /*!
- * BetaFlow SDK v0.1.0
- * Build: 2025-06-24T13:45:00.945Z
+ * BetaFlow SDK v0.1.1
+ * Build: 2025-06-24T14:07:10.387Z
  * (c) 2025 BetaFlow
  * Released under the MIT License
  */
