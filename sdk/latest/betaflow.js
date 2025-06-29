@@ -1,6 +1,6 @@
 /*!
  * BetaFlow SDK v0.1.1
- * Build: 2025-06-29T08:21:23.162Z
+ * Build: 2025-06-29T09:55:58.708Z
  * (c) 2025 BetaFlow
  * Released under the MIT License
  */
@@ -10,8 +10,15 @@
   // BetaFlow SDK 主类
   class BetaFlow {
     constructor(config) {
+      // 验证必需参数
+      if (!config.campaignId) {
+        throw new Error('campaignId is required');
+      }
+      if (!config.apiKey) {
+        throw new Error('apiKey is required');
+      }
+      
       this.config = {
-        tenantId: config.tenantId,
         campaignId: config.campaignId,
         apiKey: config.apiKey,
         apiEndpoint: config.apiEndpoint || window.location.origin + '/api',
