@@ -1,6 +1,6 @@
 /*!
  * BetaFlow SDK v0.1.1
- * Build: 2025-06-29T09:55:58.708Z
+ * Build: 2025-06-29T10:03:15.010Z
  * (c) 2025 BetaFlow
  * Released under the MIT License
  */
@@ -307,7 +307,6 @@
           },
           body: JSON.stringify({
             ...data,
-            tenantId: this.config.tenantId,
             campaignId: this.config.campaignId,
             source: 'sdk',
             userAgent: navigator.userAgent,
@@ -464,13 +463,12 @@
     const script = document.querySelector('script[src*="betaflow"]');
     if (script && script.dataset.autoInit === 'true') {
       const config = {
-        tenantId: script.dataset.tenantId,
         campaignId: script.dataset.campaignId,
         apiKey: script.dataset.apiKey,
         debug: script.dataset.debug === 'true'
       };
       
-      if (config.tenantId && config.campaignId) {
+      if (config.campaignId && config.apiKey) {
         window.betaflowInstance = new BetaFlow(config);
       }
     }
